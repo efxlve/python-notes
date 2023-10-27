@@ -17,4 +17,4 @@ for i in range(15):
     turtle_instance.left(i)
 
 turtle.mainloop()
-#turtle.done()
+# turtle.done()
