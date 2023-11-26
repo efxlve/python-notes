@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Weather Report</h1>
+        <!-- Jinja syntax -->
+        <p>Today's weather is {{ weather }}</p>
+        <p>Today's temperature is {{ temperature }}</p>
+        <ul>
+            {% for key, values in london.items %}
+                <li>London: {{ key }}: {{ values }}</li>
+            {% endfor %}
+        </ul>
+        {% if user_premium %}
+            <h2>Thanks for being a premium user!</h2>
+
+            <ul>
+                {% for item in paris %}
+                    {% if item < 6 %}
+                    <h4><li>Paris: too cold</li></h4>
+                    {% else %}
+                    <h4><li>Paris: {{ item }}</li></h4>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        <h2>{{test | lower}}</h2>
+
+        <!--<h2><a href="{% url 'template_app:index' %}">Home</a></h2>-->
+{% endblock %}
