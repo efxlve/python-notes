@@ -14,7 +14,7 @@ This repository contains notes on Python programming language. The notes are wri
 ## Installation
 To install the repository, clone the repository to your local machine.
 ```bash
-git clone
+git clone https://github.com/efxlve/python-notes.git
 ```
 
 ## Usage
